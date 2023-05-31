@@ -3,7 +3,7 @@ name: Provision Resources
 trigger: none
 
 pool:
-  name: Default
+  name: Azure Pipelines
   demands: npm
 
 steps:
