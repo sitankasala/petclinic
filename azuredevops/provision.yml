@@ -6,14 +6,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: TerraformInstaller@0
-  displayName: Install Terraform
+
+- task: TerraformInstaller
+  displayName: install terraform
   inputs:
-    terraformVersion: '1.4.6'
-- task: DownloadSecureFile@1
-  displayName: 'Download secure file $(terraform.tfvars)'
-  inputs:
-    secureFile: 'terraform.tfvars'
+    terraformVersion: latest
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
