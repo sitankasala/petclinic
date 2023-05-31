@@ -3,10 +3,10 @@ name: Provision Resources
 trigger: none
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Default
+  demands: npm
 
 steps:
-
 - task: TerraformInstaller@0
   displayName: install terraform
   inputs:
